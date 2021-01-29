@@ -1,5 +1,5 @@
-import { createSelector } from "reselect"
-import { AppStateType } from "../types/types";
+import {createSelector} from "reselect"
+import {AppStateType} from "../types/types"
 
 
 const getUsersSelector = (state: AppStateType) => {
@@ -24,9 +24,4 @@ export const getIsFetching = (state: AppStateType) => {
 }
 export const getFollowingInProgress = (state: AppStateType) => {
     return state.usersPage.followingInProgress
-}
-
-export const countSomethingDifficult = (state: AppStateType) => {
-    let count = 23
-    return count
 }

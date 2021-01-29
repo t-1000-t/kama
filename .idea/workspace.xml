@@ -11,6 +11,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="CSS File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -30,13 +33,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.TypeScript" />
     <property name="ts.external.directory.path" value="C:\Users\home\Desktop\traine\TStestProject\IT_KAMA\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -49,6 +53,8 @@
       <recent name="C:\Users\home\Desktop\traine\TStestProject\IT_KAMA\src\api\users-api.tsx" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\home\Desktop\traine\TStestProject\IT_KAMA\src\components\common\Profile" />
+      <recent name="C:\Users\home\Desktop\traine\TStestProject\IT_KAMA\src\components\common\Dialogs\DialogsContainer" />
       <recent name="C:\Users\home\Desktop\traine\TStestProject\IT_KAMA\src\components\common\Dialogs" />
     </key>
   </component>
@@ -61,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611840771895</updated>
       <workItem from="1611840774210" duration="1700000" />
-      <workItem from="1611842821176" duration="23507000" />
+      <workItem from="1611842821176" duration="23626000" />
+      <workItem from="1611931948957" duration="24692000" />
     </task>
     <servers />
   </component>
@@ -69,14 +76,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1611869975127">
+    <state x="129" y="7" key="SettingsEditor" timestamp="1611939997380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1611869975127" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1611846407220">
+    <state x="129" y="7" key="SettingsEditor/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1611939997380" />
+    <state x="390" y="97" width="585" height="534" key="find.popup" timestamp="1611944431008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1611846407220" />
+    <state x="390" y="97" width="585" height="534" key="find.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1611944431008" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1611945488323">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1611945488323" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -84,7 +95,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/types/types.ts</url>
           <line>1</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

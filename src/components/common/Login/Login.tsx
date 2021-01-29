@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import {login} from "../../../redux/auth-reducer"
 import {Redirect} from "react-router-dom"
 import style from "../../common/FormsControls/FormsControls.module.css"
-import { AppStateType } from "../../../types/types"
+import {AppStateType, GetStringKeys} from "../../../types/types"
 
 
 type LoginFormOwnProps = {
@@ -37,7 +37,7 @@ export type LoginFormValuesType = {
     captcha: string
 }
 
-type LoginFormValuesTypeKeys = Extract<keyof LoginFormValuesType, string>
+type LoginFormValuesTypeKeys = GetStringKeys<LoginFormValuesType>
 
 
 const LoginReduxForm = reduxForm <LoginFormValuesType, LoginFormOwnProps>({form: 'login'})(LoginForm)

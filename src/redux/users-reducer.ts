@@ -24,7 +24,7 @@ const userReducer = (state = initialState, action: ActionsTypes): InitialStateTy
         case 'SN/USERS/FOLLOW':
             return {
                 ...state,
-                users: updateObjectInArray(state.users, action.userId, "id", { followed: true })
+                users: updateObjectInArray( state.users, action.userId, "id", { followed: true })
             }
         case 'SN/USERS/UNFOLLOW':
             return {

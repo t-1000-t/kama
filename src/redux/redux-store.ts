@@ -18,8 +18,10 @@ export let rootReducer = combineReducers({
   app: appReducer
 });
 
-const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
+// @ts-ignore
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
+// @ts-ignore
 window.__store__ = store;
 
 export default store;
