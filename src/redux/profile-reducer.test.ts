@@ -1,54 +1,61 @@
-import profileReducer, {actions} from "./profile-reducer";
-import ReacrDOM from "react-dom"
-import App from "../App"
-import React from "react"
-import {ProfileType} from "../types/types";
+import profileReducer, {actions} from './profile-reducer';
+import React from 'react';
+import {ProfileType} from '../types/types';
 
 let state = {
     posts: [
-        { id: 1, message: "HI", likesCount: 12 },
-        { id: 2, message: "HI2", likesCount: 14 },
-        { id: 3, message: "HI3", likesCount: 15 },
-        { id: 4, message: "HI4", likesCount: 16 },
-        { id: 5, message: "HI5", likesCount: 17 },
+        {id: 1, message: 'Hi, how are you?', likesCount: 12},
+        {id: 2, message: 'It\'s my first post', likesCount: 11},
+        {id: 3, message: 'Blabla', likesCount: 11},
+        {id: 4, message: 'Dada', likesCount: 11}
     ],
     profile: null,
     status: '',
-    newPostText: ''
-}
+};
 
-it('length of post should be incremented', function () {
+it('length of posts should be incremented', () => {
     // 1. test data
-    let action = actions.addPostActionCreator("intshop.store")
+    let action = actions.addPostActionCreator("it-kamasutra.com");
+
     // 2. action
-    let newState = profileReducer(state, action)
+    let newState = profileReducer(state, action);
+
     // 3. expectation
-    expect(newState.posts.length).toBe(5)
+    expect(newState.posts.length).toBe(5);
+
 });
 
-it('message of new post should be correct', function () {
+it('message of new post should be correct', () => {
     // 1. test data
-    let action = actions.addPostActionCreator("intshop.store")
+    let action = actions.addPostActionCreator("it-kamasutra.com");
+
     // 2. action
-    let newState = profileReducer(state, action)
+    let newState = profileReducer(state, action);
+
     // 3. expectation
-    expect(newState.posts[4].messages).toBe("intshop.store")
+    expect(newState.posts[4].message).toBe("it-kamasutra.com");
 });
 
-it('after deleting length of messages should be decrement', function () {
+it('after deleting length of messages should be decrement', () => {
     // 1. test data
-    let action = actions.deletePost(1)
+    let action = actions.deletePost(1);
+
     // 2. action
-    let newState = profileReducer(state, action)
+    let newState = profileReducer(state, action);
+
     // 3. expectation
-    expect(newState.posts.length).toBe(3)
+    expect(newState.posts.length).toBe(3);
 });
 
-it("after deleting length should't be decrement if id is correct", function () {
+it(`after deleting length shouldn't be decrement if id is incorrect`, () => {
     // 1. test data
-    let action = actions.deletePost(1080)
+    let action = actions.deletePost(1000);
+
     // 2. action
-    let newState = profileReducer(state, action)
+    let newState = profileReducer(state, action);
+
     // 3. expectation
-    expect(newState.posts.length).toBe(4)
+    expect(newState.posts.length).toBe(4);
 });
+
+

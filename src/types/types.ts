@@ -1,20 +1,3 @@
-import { rootReducer } from "../redux/redux-store"
-import {ThunkAction} from "redux-thunk";
-import {Action} from "redux";
-
-export type DataMeGetAuthApiType = {
-    id: number
-    email: string
-    login: string
-}
-
-export type DataLoginGetAuthApiType = {
-    id: number
-    email: string
-    login: string
-}
-
-
 export type PostType = {
     id: number
     message: string
@@ -22,7 +5,7 @@ export type PostType = {
 }
 export type ContactsType = {
     github: string
-    Vk: string
+    vk: string
     facebook: string
     instagram: string
     twitter: string
@@ -30,7 +13,7 @@ export type ContactsType = {
     youtube: string
     mainLink: string
 }
-export type PhotoType = {
+export type PhotosType = {
     small: string | null
     large: string | null
 }
@@ -40,7 +23,7 @@ export type ProfileType = {
     lookingForAJobDescription: string
     fullName: string
     contacts: ContactsType
-    photos: PhotoType
+    photos: PhotosType
     aboutMe: string
 }
 
@@ -48,15 +31,6 @@ export type UserType = {
     id: number
     name: string
     status: string
-    photos: PhotoType
+    photos: PhotosType
     followed: boolean
 }
-
-export type RootReducerType = typeof rootReducer // (globalstate: AppStateType) => AppStateType
-export type AppStateType = ReturnType<RootReducerType>
-
-export type InferActionsTypes<T> = T extends {[key: string]: (...args: any[]) => infer U} ? U : never
-
-export type BaseThunkType<A extends Action = Action, R= Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
-
-export type GetStringKeys<T> = Extract<keyof T, string>

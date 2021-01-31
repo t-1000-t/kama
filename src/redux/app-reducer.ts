@@ -1,12 +1,12 @@
-import { getAuthUserData } from "./auth-reducer";
-import {InferActionsTypes} from "../types/types";
+import {getAuthUserData} from "./auth-reducer"
+import {InferActionsTypes} from './redux-store';
 
 let initialState = {
     initialized: false
-}
+};
 
 export type InitialStateType = typeof initialState
-export type ActionsType = InferActionsTypes<typeof actions>
+type ActionsType = InferActionsTypes<typeof actions>
 
 const appReducer = (state = initialState, action: ActionsType): InitialStateType => {
     switch (action.type) {
@@ -27,9 +27,11 @@ export const actions = {
 export const initializeApp = () => (dispatch: any) => {
     let promise = dispatch(getAuthUserData());
 
-    Promise.all([promise]).then(() => {
-        dispatch(actions.initializedSuccess());
-    });
+    Promise.all([promise])
+        .then(() => {
+            dispatch(actions.initializedSuccess());
+        });
 }
+
 
 export default appReducer;
